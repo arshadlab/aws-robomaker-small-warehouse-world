@@ -5,11 +5,18 @@
 
     </plugin>
 
+    <plugin name="gazebo_step_control" filename="libgazebo_step_control.so">
+        <ros>
+            <!-- <namespace> ### </namespace> -->
+        </ros>
+        <enable_control>false</enable_control>
+    </plugin>
+
     <gravity>0 0 -9.8</gravity>
     <physics default="0" name="default_physics" type="ode">
-      <max_step_size>0.004</max_step_size>
+      <max_step_size>0.008</max_step_size>
       <real_time_factor>1</real_time_factor>
-      <real_time_update_rate>250</real_time_update_rate>
+      <real_time_update_rate>125</real_time_update_rate>
     </physics>
 
     
@@ -54,14 +61,14 @@
         </include>
         <pose frame="">4.73156 -8.6651 0 0 0 0</pose>
 	</model>
-
+<!--
         <model name="aws_robomaker_warehouse_ShelfD_01_001">
         <include>
             <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
         </include>
         <pose frame="">4.73156 -1.242668 0 0 0 0</pose>
 	</model>
-
+-->
         <model name="aws_robomaker_warehouse_ShelfD_01_002">
         <include>
             <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
@@ -188,39 +195,44 @@
         <include>
             <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
         </include>
-        <pose frame="">-1.573677 2.301994 -0.015663 0 0 -3.133191</pose>
+        <pose frame="">-1.73677 2.301994 -0.015663 0 0 -3.133191</pose>
 	</model>
 
-     <model name="aws_robomaker_warehouse_ClutteringC_01_032">
+    <model name="aws_robomaker_warehouse_ClutteringC_01_021_1">
+        <include>
+            <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+        </include>
+        <pose frame="">-1.8 -1.6 -0.015663 0 0 -1.563161</pose>
+	</model>
+
+    <model name="aws_robomaker_warehouse_ClutteringC_01_032">
         <include>
             <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
         </include>
         <pose frame="">-1.2196 9.407 -0.015663 0 0 1.563871</pose>
 	</model>
 
-     <model name='aws_robomaker_warehouse_ClutteringD_01_005'>
+    <model name='aws_robomaker_warehouse_ClutteringD_01_005'>
         <include>
             <uri>model://aws_robomaker_warehouse_ClutteringD_01</uri>
         </include>
         <pose frame=''>-1.634682 -7.811813 -0.319559 0 0 0</pose>
 	</model>
-                                                 
-      <model name='aws_robomaker_warehouse_TrashCanC_01_002'>
+
+    <model name='aws_robomaker_warehouse_TrashCanC_01_002'>
         <include>
             <uri>model://aws_robomaker_warehouse_TrashCanC_01</uri>
         </include>
         <pose frame=''>-1.592441 7.715420 0 0 0 0</pose>
 	</model>
 
-
-      <model name='aws_robomaker_warehouse_PalletJackB_01_001'>
+    <model name='aws_robomaker_warehouse_PalletJackB_01_001'>
         <include>
             <uri>model://aws_robomaker_warehouse_PalletJackB_01</uri>
         </include>
         <pose frame=''>-0.276098 -9.481944 0.023266 0 0 0</pose>
 	</model>
 
-    	
     <light name="Warehouse_CeilingLight_003" type="point">
       <pose frame="">0 0 9 0 0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
@@ -238,7 +250,8 @@
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <!--<pose frame=''>-4.70385 10.895 16.2659 -0 0.921795 -1.12701</pose>-->
-        <pose frame=''>-3.971463 -6.889399 3.959510 -0 0.409795 1.181796</pose>
+        <!--<pose frame=''>-3.971463 -6.889399 3.959510 -0 0.409795 1.181796</pose>-->
+        <pose frame=''>4.49 -2.5 3.17 -0 0.459795 2.66</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
