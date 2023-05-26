@@ -9,7 +9,7 @@
         <ros>
             <!-- <namespace> ### </namespace> -->
         </ros>
-        <enable_control>false</enable_control>
+        <enable_control>False</enable_control>
     </plugin>
 
     <gravity>0 0 -9.8</gravity>
